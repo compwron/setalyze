@@ -2,9 +2,9 @@
 
 require_relative '../lib/setalyze/game'
 
-g = Game.new(STDOUT)
+g = Game.new
 while g.continue?
-	g.play(Parser.parse(gets.chomp))
+	puts g.play(Parser.parse(gets.chomp))
 end
 puts g.summary
 
