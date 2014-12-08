@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'setsperi/version'
+require 'setalyze/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'setsperi'
-  spec.version       = Setsperi::VERSION
+  spec.name          = 'setalyze'
+  spec.version       = Setalyze::VERSION
   spec.authors       = ['cwron']
   spec.email         = ['foo@bar.com']
   spec.summary       = 'commandline game of Set'

@@ -1,7 +1,7 @@
-require 'setsperi/version'
-require 'setsperi/game'
+require 'setalyze/version'
+require 'setalyze/game'
 require 'colorize'
 
-module Setsperi
+module Setalyze
   # Your code goes here...
 end

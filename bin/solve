@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/setsperi/solver'
+require_relative '../lib/setalyze/solver'
 
 abort('Needs cards to parse!') unless ARGV[0]
 cards = ARGV[0].strip
