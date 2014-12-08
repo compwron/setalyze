@@ -15,6 +15,12 @@ describe Game do
       expect(g.summary).to eq "Game in progress. 1 turns played. 1 sets found by user."
       expect(g.continue?).to eq true
     end
+
+    it 'does not increment user found sets for invalid set' do
+      g.play Instruction::InvalidSet
+      expect(g.summary).to eq "Game in progress. 1 turns played. 0 sets found by user."
+      expect(g.continue?).to eq true
+    end
   end
 
   describe 'continue?' do
