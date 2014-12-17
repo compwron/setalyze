@@ -7,6 +7,14 @@ class Deck
     @used_cards = []
   end
 
+  def sample num
+    @cards.sample num
+  end
+
+  def remove cards
+    used cards
+  end
+
   def self.starting_size
     81
   end

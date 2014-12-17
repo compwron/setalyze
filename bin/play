@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/setalyze/game'
+require_relative '../lib/setalyze/instructions'
+require_relative '../lib/setalyze/card_set'
 
 g = Game.new
+puts g.game_board
 while g.continue?
-	puts g.play(Parser.parse(gets.chomp))
+  puts g.play(gets.chomp)
 end
 puts g.summary
-
