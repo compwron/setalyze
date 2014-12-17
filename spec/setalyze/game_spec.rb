@@ -3,20 +3,6 @@ require_relative 'spec_helper'
 describe Game do
   let(:g) { Game.new }
 
-  describe 'game_board' do
-    it 'should start with 12 real cards' do
-      gb = g.game_board # does this come from .play?
-      cards_on_board = gb.split("\n").map { |line| line.split(' ') }.flatten
-      expect(cards_on_board.size).to eq 12
-      cards_on_board.map do|c|
-        expect(Card.resurrect(c)).to_not be_nil
-      end
-    end
-  end
-
-  it 'has a spread with cards' do
-  end
-
   describe 'play' do
     it 'should end game with 1 turn and no wins when user says done' do
       g.play Instruction::GameOver
@@ -51,6 +37,14 @@ describe Game do
       g.play Instruction::ValidSet
       second_board = g.game_board
       expect(first_board).to_not eq second_board
+    end
+
+     it 'should start with 12 real cards' do
+      cards_on_board = (g.play "").split("\n\n").last.split("\n").map { |line| line.split(' ') }.flatten
+      expect(cards_on_board.size).to eq 12
+      cards_on_board.map do|c|
+        expect(Card.resurrect(c)).to_not be_nil
+      end
     end
   end
 

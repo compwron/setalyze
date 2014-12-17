@@ -27,7 +27,7 @@ class Game
   end
 
   def _user_response valid_user_set
-    (valid_user_set ? "Valid set!" : "Invalid set") + "\nNew board:\n#{game_board}"
+    (valid_user_set ? "Valid set!" : "Invalid set") + "\nNew board:\n\n#{game_board}"
   end
 
   def summary
